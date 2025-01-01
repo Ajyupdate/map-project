@@ -2,44 +2,10 @@
 import { useState } from "react";
 import "../../utils/flowbite-client";
 
-import { BoxProps, FlexProps } from "@chakra-ui/react";
 import Image from "next/image";
-import { IconType } from "react-icons";
-import {
-  FiCompass,
-  FiHome,
-  FiSettings,
-  FiStar,
-  FiTrendingUp,
-} from "react-icons/fi";
+import Link from "next/link";
 import { PiSignOutBold } from "react-icons/pi";
 import Navbar from "./Navbar";
-
-interface LinkItemProps {
-  name: string;
-  icon: IconType;
-}
-
-interface NavItemProps extends FlexProps {
-  icon: IconType;
-  children: React.ReactNode;
-}
-
-interface MobileProps extends FlexProps {
-  onOpen: () => void;
-}
-
-interface SidebarProps extends BoxProps {
-  onClose: () => void;
-}
-
-const LinkItems: Array<LinkItemProps> = [
-  { name: "Home", icon: FiHome },
-  { name: "Trending", icon: FiTrendingUp },
-  { name: "Explore", icon: FiCompass },
-  { name: "Favourites", icon: FiStar },
-  { name: "Settings", icon: FiSettings },
-];
 
 const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -47,7 +13,6 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
   const [isOpen, setIsOpen] = useState(true);
   const [isFinanceOpen, setIsFinanceOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [DropdownMenuIsOpen, setDropdownMenuIsOpen] = useState(false);
 
   return (
     <div>
@@ -146,7 +111,7 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
           </button>
           <ul className="space-y-2 font-medium">
             <li className="mb-6">
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
@@ -154,7 +119,7 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
                 <span className="ms-3 text-xs font-semibold text-[#141460]">
                   Medical Advanced Platform
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
               <a
@@ -224,12 +189,12 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
                 className={`${isOpen ? "block" : "hidden"} py-2 space-y-2`}
               >
                 <li>
-                  <a
+                  <Link
                     href="/"
                     className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                   >
                     Quotes
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a

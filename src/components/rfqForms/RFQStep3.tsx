@@ -9,7 +9,7 @@ interface RFQStep3Props {
   onPrev: () => void;
 }
 
-const RFQStep3 = ({ onNext, onPrev }: RFQStep3Props) => {
+const RFQStep3 = ({ onPrev }: RFQStep3Props) => {
   const [showTerms, setShowTerms] = useState(false);
 
   const toggleTerms = () => setShowTerms(!showTerms);
@@ -22,9 +22,17 @@ const RFQStep3 = ({ onNext, onPrev }: RFQStep3Props) => {
     deliveryDate: "2024-12-02",
   });
 
-  const handleInputChange = (e) => {
+  interface FormData {
+    title: string;
+    rfqNo: string;
+    requestor: string;
+    department: string;
+    deliveryDate: string;
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
+    setFormData((prevData: FormData) => ({ ...prevData, [name]: value }));
   };
 
   const toggleEdit = () => {
@@ -430,7 +438,7 @@ const RFQStep3 = ({ onNext, onPrev }: RFQStep3Props) => {
         <Toast
           isVisible={isToastVisible}
           message="Quote submitted successfully!"
-          type="success"
+          onClose={() => setIsToastVisible(false)}
         />
       </div>
     </div>
