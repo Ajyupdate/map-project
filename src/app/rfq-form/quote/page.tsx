@@ -11,7 +11,7 @@ const QuoteDetails = () => {
 
       {/* Quote Details */}
       <div className="mx-6 bg-white rounded-lg   mb-6">
-        <div className="flex justify-between items-center">
+        <div className="md:flex justify-between items-center">
           <div>
             <h1 className="text-xl font-bold">Quote details</h1>
             <p className="text-sm text-gray-400">
@@ -42,7 +42,7 @@ const QuoteDetails = () => {
           </div>
         </div>
         <div>
-          <div className="pr-6 grid grid-cols-2 gap-4 mb-4">
+          <div className="pr-6 md:grid grid-cols-2 md:gap-4 mb-4">
             <div className=" my-4">
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <p className="text-gray-500 text-sm">Title</p>
@@ -83,7 +83,7 @@ const QuoteDetails = () => {
                   src={`/building.png`}
                   alt="delete"
                 />
-                <p className="pl-2 pt-2 text-gray-500 text-sm">Client</p>
+                <p className="pl-2 pl-0 pt-2 text-gray-500 text-sm">Client</p>
               </div>
 
               <p className="font-medium flex items-center mt-4">

@@ -64,7 +64,7 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           aria-controls="separator-sidebar"
           type="button"
-          className="md:hidden inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:block hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="md:hidden inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:block hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
         >
           <span className="sr-only">Open sidebar</span>
           <svg
@@ -90,10 +90,10 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
         } sm:translate-x-0`}
         aria-label="Sidebar"
       >
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 ">
           <button
             onClick={() => setIsSidebarOpen(false)}
-            className="md:hidden top-4 right-4 p-2 text-gray-500 bg-gray-200 rounded-full hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 focus:outline-none"
+            className="md:hidden top-4 right-4 p-2 text-gray-500 bg-gray-200 rounded-full hover:bg-gray-300  focus:outline-none"
           >
             <span className="sr-only">Close sidebar</span>
             <svg
@@ -113,7 +113,7 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
             <li className="mb-6">
               <Link
                 href="/"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group"
               >
                 <Image width={100} height={100} src={`/Group.png`} alt="Logo" />
                 <span className="ms-3 text-xs font-semibold text-[#141460]">
@@ -124,7 +124,7 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group"
               >
                 <Image
                   width={20}
@@ -138,7 +138,7 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
               >
                 <Image
                   width={20}
@@ -156,7 +156,7 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
             <li>
               <button
                 type="button"
-                className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 "
                 onClick={() => setIsOpen(!isOpen)} // Toggle the dropdown
               >
                 <Image
@@ -191,7 +191,7 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
                 <li>
                   <Link
                     href="/"
-                    className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100"
                   >
                     Quotes
                   </Link>
@@ -199,7 +199,7 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
                 <li>
                   <a
                     href="#"
-                    className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 "
                   >
                     Order
                   </a>
@@ -209,7 +209,7 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
             <li>
               <button
                 type="button"
-                className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 "
                 onClick={() => setIsFinanceOpen(!isFinanceOpen)} // Toggle the dropdown
               >
                 <Image
@@ -279,7 +279,7 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
               >
                 <img
                   width={20}
@@ -295,7 +295,7 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
+                className="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100"
               >
                 <Image
                   width={20}
@@ -309,7 +309,7 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
+                className="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 "
               >
                 <Image
                   width={20}
@@ -323,7 +323,7 @@ const SidebarContent: React.FC<{ children: React.ReactNode }> = ({
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700  group"
+                className="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100  group"
               >
                 <img
                   className="w-10 h-10 rounded-full"
